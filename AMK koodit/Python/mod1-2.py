@@ -1,49 +1,49 @@
 #teht 1.1
-#tulostaa nimen
+# Tulostaa nimen
 print("Micael Raste")
 
 #teht 2.1
-#kysyy nimen ja tulostaa tervehdyksen
+# Kysyy nimen ja tulostaa tervehdyksen
 nimi = input("Anna nimesi: ")
 print(f"Terve, {nimi}!")
 
 #teht 2.2
-#kysyy ympyrän säteen
+# Kysyy ympyrän säteen
 sade = input("Anna ympyrän säde: ")
-#laskee pinta-alan
+# Laskee pinta-alan
 pintala = 3.14 * float(sade) ** 2
-#tulostaa pinta-alan
+# Tulostaa pinta-alan
 print("Ympyrän pinta-ala on", pintala)
 
 #teht 2.3
-#kysyy suorakulmion kannan ja korkeuden
+# Kysyy suorakulmion kannan ja korkeuden
 kanta = input("Anna suorakulmion kanta: ")
 korkeus = input("Anna suorakulmion korkeus: ")
-#laskee piirin ja pinta-alan
+# Laskee piirin ja pinta-alan
 piiri = float(kanta) * 2 + float(korkeus) * 2
 suorala = float(kanta) ** float(korkeus)
-#tulostaa piirin ja pinta-alan
+# Tulostaa piirin ja pinta-alan
 print("Suorakulmion piiri on", piiri, "ja pinta-ala on", suorala)
 
 #teht 2.4
-#funktio summaa ja kertoo luvut listasta
+# Funktio summaa ja kertoo luvut listasta
 def mul(numlist):
     result = 1
     for i in numlist:
         result *= i
     return result
 
-#lista luvuista
+# Lista luvuista
 numlist = []
-#kysyy 3 lukua ja lisää ne listaan
+# Kysyy 3 lukua ja lisää ne listaan
 for i in range(3):
     num = input("Anna luku: ")
     numlist.append(float(num))
-#tuostaa summan, tulon ja keskiarvon
+# Tulostaa summan, tulon ja keskiarvon
 print("Lukujen summa on", sum(numlist), "Lukujen tulo on", mul(numlist), "ja keskiarvo on", sum(numlist) / len(numlist))
 
 #teht 2.5
-#funktio muuntaa kaikki luodeiksi
+# Funktio muuntaa kaikki luodeiksi
 def muunna_kilogrammoiksi_ja_grammoiksi(leiviskat, naulat, luodit):
     yhteensa_luodit = leiviskat * 20 * 32
     yhteensa_luodit += naulat * 32
@@ -70,14 +70,14 @@ kilot, grammat = muunna_kilogrammoiksi_ja_grammoiksi(leiviskat, naulat, luodit)
 print(f"Vastaava paino on {kilot} kg ja {grammat:.2f} g.")
 
 #teht 2.6
-#lisää random lisukkeen
+# Lisää random lisukkeen
 import random
-#funktio tulostaa listan numerot peräkkäin
+# Funktio tulostaa listan numerot peräkkäin
 def printable(list):
     return "".join([str(i) for i in list])
-#lisää 3 numeroa randomisti 0-9 väliltä
+# Lisää 3 numeroa randomisti 0-9 väliltä
 num1 = [random.randint(0, 9) for i in range(3)]
-#lisää 4 numeroa randomisti 1-6 väliltä
+# Lisää 4 numeroa randomisti 1-6 väliltä
 num2 = [random.randint(1, 6) for i in range(4)]
-#tulostaa molemmat listat
+# Tulostaa molemmat listat
 print("Ensimmäinen luku: ", printable(num1), "Toinen luku: ", printable(num2))
