@@ -63,3 +63,14 @@ else:
 
 
 #teht 5.4
+# Alustetaan lista kaupungeille
+cities = []
+
+# Kysytään käyttäjältä viiden kaupungin nimet
+for i in range(5):
+    city = input("Anna kaupungin nimi: ")
+    cities.append(city)
+
+# Tulostetaan kaupungin nimet
+for city in cities:
+    print(city)
