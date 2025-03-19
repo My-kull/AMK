@@ -9,7 +9,20 @@ app = Flask(__name__)
 def summa():
     args = request.args
     luku = float(args.get("luku"))
-    isPrime = False
+    isPrime = True
+
+    if luku < 2:
+        isPrime = False
+    if luku in (2, 3):
+        isPrime = True
+    if luku % 2 == 0 or luku % 3 == 0:
+        isPrime = False
+
+    i = 5
+    while i * i <= luku:
+        if luku % i == 0 or luku % (i + 2) == 0:
+            isPrime = False
+        i += 6
 
     vastaus = {"Number": luku, "isPrime": isPrime}
 
