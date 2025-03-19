@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 
 @app.route("/isPrime/<num>")
-def summa(num):
+def primer(num):
     luku = int(num)
     isPrime = True
 
@@ -42,10 +42,8 @@ def summa(num):
 # Tehtävä 13.2
 
 
-@app.route("/airport")
-def homma():
-    args = request.args
-    ICAO = args.get("ICAO")
+@app.route("/airport/<ICAO>")
+def airport(ICAO):
     Name = "Name"
     Municipality = "Municipality"
 
