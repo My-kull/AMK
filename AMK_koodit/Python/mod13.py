@@ -1,4 +1,14 @@
 from flask import Flask, request
+import mysql.connector
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="surviver",
+    password="123",
+    database="flight_game",
+    charset="latin1",
+    collation="latin1_swedish_ci",
+)
 
 # Tehtävä 13.1
 
@@ -6,10 +16,9 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-@app.route("/isPrime")
-def summa():
-    args = request.args
-    luku = float(args.get("luku", 0))
+@app.route("/isPrime/<num>")
+def summa(num):
+    luku = int(num)
     isPrime = True
 
     if luku < 2:
@@ -37,8 +46,10 @@ def summa():
 def homma():
     args = request.args
     ICAO = args.get("ICAO")
+    Name = "Name"
+    Municipality = "Municipality"
 
-    vastaus = {"ICAO": ICAO}
+    vastaus = {"ICAO": ICAO, "Name": Name, "Municipality": Municipality}
 
     return vastaus
 
