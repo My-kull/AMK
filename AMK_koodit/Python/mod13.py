@@ -2,6 +2,7 @@ from flask import Flask, request
 
 # Tehtävä 13.1
 
+
 app = Flask(__name__)
 
 
@@ -34,9 +35,12 @@ def summa():
 
 @app.route("/airport")
 def homma():
-    juttu = {"message": "huhhhuh"}
+    args = request.args
+    ICAO = args.get("ICAO")
 
-    return juttu
+    vastaus = {"ICAO": ICAO}
+
+    return vastaus
 
 
 if __name__ == "__main__":
