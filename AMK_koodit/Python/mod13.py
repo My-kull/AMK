@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/isPrime")
 def summa():
     args = request.args
-    luku = float(args.get("luku"))
+    luku = float(args.get("luku", 0))
     isPrime = True
 
     if luku < 2:
@@ -27,6 +27,16 @@ def summa():
     vastaus = {"Number": luku, "isPrime": isPrime}
 
     return vastaus
+
+
+# Tehtävä 13.2
+
+
+@app.route("/airport")
+def homma():
+    juttu = {"message": "huhhhuh"}
+
+    return juttu
 
 
 if __name__ == "__main__":
