@@ -44,13 +44,20 @@ def primer(num):
 
 @app.route("/airport/<ICAO>")
 def airport(ICAO):
-    Name = "Name"
-    Municipality = "Municipality"
+    cursor = conn.cursor()
+    cursor.execute("SELECT name, municipality FROM airport WHERE ident = %s", (ICAO,))
+    result = cursor.fetchone()
+    if result:
+        Name, Municipality = result
+    else:
+        Name, Municipality = None, None
 
-    vastaus = {"ICAO": ICAO, "Name": Name, "Municipality": Municipality}
+    output = {"ICAO": ICAO, "Name": Name, "Municipality": Municipality}
 
-    return vastaus
+    return output
 
 
 if __name__ == "__main__":
     app.run(use_reloader=True, host="127.0.0.1", port=3000)
+
+conn.close()
