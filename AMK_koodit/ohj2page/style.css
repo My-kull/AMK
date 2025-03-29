@@ -1,0 +1,201 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background color for the whole page */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(to bottom, #000, #fff, #000);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header section */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #d3d3d3;
+  color: #fff;
+  z-index: 1000;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 120px;
+  height: auto;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1em;
+}
+
+/* Main section */
+.main {
+  margin-top: 60px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 40px 200px;
+}
+
+.main h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main .image-placeholder {
+  background-color: #333;
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #aaa;
+}
+
+/* Products section */
+.products {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 100px 20px;
+}
+
+.product-card {
+  background-color: #e0e0e0;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.product-card .image-placeholder {
+  background-color: #333;
+  height: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #aaa;
+}
+
+.product-card p {
+  font-size: 0.9em;
+  color: #000;
+}
+
+.product-card .product-title {
+  font-style: italic;
+  color: #000;
+}
+
+/* Contact section */
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.contact .contact-info {
+  max-width: 400px;
+}
+
+.contact .contact-info h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact .contact-info p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.contact .contact-info p strong {
+  font-weight: bold;
+}
+
+.contact .map-placeholder {
+  background-color: #333;
+  width: 60%;
+  max-width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 2em;
+}
+
+/* Footer section with text */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  font-size: 1em;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .header nav a {
+    margin: 0 10px;
+    font-size: 0.9em;
+  }
+
+  .main h1 {
+    font-size: 2em;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact .map-placeholder {
+    width: 90%;
+    height: 200px;
+  }
+
+  .footer {
+    font-size: 0.9em;
+  }
+}
