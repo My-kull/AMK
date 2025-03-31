@@ -60,9 +60,9 @@ body {
 
 .main .image-placeholder {
   background-color: #333;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
-  height: 300px;
+  height: auto;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -109,6 +109,13 @@ body {
   color: #000;
 }
 
+.product-card .product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .product-card .product-title {
   font-style: italic;
   color: #000;
@@ -145,9 +152,9 @@ body {
 
 .contact .map-placeholder {
   background-color: #333;
-  width: 60%;
+  width: 100%;
   max-width: 500px;
-  height: 300px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +199,7 @@ body {
 
   .contact .map-placeholder {
     width: 90%;
-    height: 200px;
+    height: auto;
   }
 
   .footer {
