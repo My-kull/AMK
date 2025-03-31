@@ -63,6 +63,7 @@ body {
   width: 100%;
   max-width: 600px;
   height: auto;
+  object-fit: cover;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -98,7 +99,8 @@ body {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-  display: flex;
+  display: block;
+  object-fit: cover;
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
@@ -149,7 +151,8 @@ body {
   width: 100%;
   max-width: 500px;
   height: auto;
-  display: flex;
+  display: block;
+  object-fit: cover;
   justify-content: center;
   align-items: center;
   color: #aaa;
