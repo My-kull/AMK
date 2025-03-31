@@ -95,7 +95,8 @@ body {
 
 .product-card .image-placeholder {
   background-color: #333;
-  height: 200px;
+  width: 100%;
+  height: auto;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -107,13 +108,6 @@ body {
 .product-card p {
   font-size: 0.9em;
   color: #000;
-}
-
-.product-card .product-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
 }
 
 .product-card .product-title {
