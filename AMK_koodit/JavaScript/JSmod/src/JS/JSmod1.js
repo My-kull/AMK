@@ -127,3 +127,15 @@ function simulateDiceProbability() {
   document.getElementById("probabilityResult").textContent =
     `Probability to get sum ${targetSum} with ${numDice} dice is ${probability}%`;
 }
+
+export default {
+  greetUser,
+  calculateNumbers,
+  assignHogwartsHouse,
+  isLeapYear,
+  calculateSquareRoot,
+  rollDice,
+  printLeapYears,
+  checkPrime,
+  simulateDiceProbability,
+};
