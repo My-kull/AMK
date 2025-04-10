@@ -1,9 +1,9 @@
 // Tehtävä 1.1
 function printToConsole() {
   console.log("I'm printing to console");
+  document.querySelector("#consoleTarget").innerHTML =
+    "Check JavaScript console!";
 }
-
-printToConsole();
 
 // Tehtävä 1.2
 function greetUser() {
@@ -129,6 +129,7 @@ function simulateDiceProbability() {
 }
 
 export default {
+  printToConsole,
   greetUser,
   calculateNumbers,
   assignHogwartsHouse,
