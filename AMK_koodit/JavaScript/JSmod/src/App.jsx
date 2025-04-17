@@ -46,6 +46,12 @@ function App() {
 
         <button onClick={mod2.reverseList}>Reverse List</button>
         <p id="reverseListTarget"></p>
+
+        <button onClick={mod2.participantList}>Participant Printer</button>
+        <p id="participants"></p>
+      </div>
+      <div className="box">
+        <h2>JavaScript Module 3</h2>
       </div>
     </div>
   );

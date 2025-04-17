@@ -14,14 +14,27 @@ function reverseList() {
 }
 
 // Tehtävä 2.2
+
 function participantList() {
-  for (let i = 0; i < parseInt(prompt("How many participants?")); i++) {
-    const name = prompt("Enter participant's name:");
-    console.log(name);
+  const count = Number(prompt("How many participants?"));
+  const names = [];
+
+  for (let i = 0; i < count; i++) {
+    names.push(prompt(`Enter name for participant ${i + 1}:`));
   }
+
+  names.sort();
+
+  let html = "<ol>";
+  for (const name of names) {
+    html += `<li>${name}</li>`;
+  }
+  html += "</ol>";
+
+  document.querySelector("#participants").innerHTML = html;
 }
 
 export default {
   reverseList,
-  paricipantList,
+  participantList,
 };
